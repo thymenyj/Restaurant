@@ -1,11 +1,14 @@
 package com.example.thymen.restaurant;
 
-public class MenuItem {
+import java.io.Serializable;
+
+public class MenuItem implements Serializable {
     String name;
     String description;
     String imageUrl;
     String price;
     String category;
+
 
     public String getName() {
         return name;

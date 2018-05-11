@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.thymen.restaurant.R;
 
 import java.util.ArrayList;
 
@@ -22,12 +21,12 @@ public class CategoriesActivity extends AppCompatActivity implements CategoriesR
 
         CategoriesRequest request = new CategoriesRequest(this);
         request.getCategories(this);
+
         ListView listView = findViewById(R.id.listview);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(CategoriesActivity.this, MenuActivity.class);
-                intent.putExtra("name", "value");
                 startActivity(intent);
             }
         });
